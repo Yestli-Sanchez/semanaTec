@@ -39,9 +39,11 @@ jobs:
         hadoop-version: '3'
 
     - run: spark-submit --version
-    - run: wget -O dataset.csv https://raw.githubusercontent.com/adsoftsito/bigdata/refs/heads/main/datasets/people.csv   
+    # - run: wget -O dataset.csv https://raw.githubusercontent.com/adsoftsito/bigdata/refs/heads/main/datasets/people.csv   
+    - run: wget -O dataset.csv https://raw.githubusercontent.com/Yestli-Sanchez/git-labs/refs/heads/master/books.csv
+    
     - run: ls -la 
-    - run: spark-submit --master local people.py
+    - run: spark-submit --master local books.py
     - name: GIT commit and push docs
       env: 
         CI_COMMIT_MESSAGE: save spark results
