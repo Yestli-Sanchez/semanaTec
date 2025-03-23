@@ -8,7 +8,7 @@ if __name__ == "__main__":
         .getOrCreate()
 
     print("read books.csv ... ")
-    path_books = "books.csv"
+    path_books = "dataset.csv"
     df_books = spark.read.csv(path_books, header=True, inferSchema=True)
     
     # Renombramos las columnas según sea necesario
