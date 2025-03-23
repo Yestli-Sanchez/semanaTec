@@ -39,7 +39,7 @@ jobs:
         hadoop-version: '3'
 
     - run: spark-submit --version
-    - run: wget -O books.csv https://raw.githubusercontent.com/Yestli-Sanchez/semanaTec/refs/heads/main/books.csv
+    - run: wget -O books.csv https://raw.githubusercontent.com/Yestli-Sanchez/git-labs/refs/heads/master/books.csv
     - run: spark-submit --master local books.py
     - run: ls -la  
     - name: GIT commit and push docs
