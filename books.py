@@ -12,7 +12,7 @@ if __name__ == "__main__":
     df_people = spark.read.csv(path_people,header=True,inferSchema=True)
     df_people = df_people.withColumnRenamed("num_pages", "paginas")
     df_people.createOrReplaceTempView("books")
-    query='DESCRIBE people'
+    query='DESCRIBE books'
     spark.sql(query).show(20)
 
     query='SELECT name, authors,`paginas` FROM books WHERE `paginas` > 10 ORDER BY `paginas`'
