@@ -73,8 +73,8 @@ st.markdown("<p class='name-font'>Yestli Darinka Santos Sánchez - A01736992</p>
 
 # Sección para enviar un job de Spark
 st.header("Enviar trabajo Spark")
-github_user = st.text_input('Usuario de Github', value='adsoftsito')
-github_repo = st.text_input('Repositorio de Github', value='bigdata')
+github_user = st.text_input('Usuario de Github', value='Yestli-Sanchez')
+github_repo = st.text_input('Repositorio de Github', value='semanaTec')
 spark_job = st.text_input('Trabajo Spark', value='spark')
 github_token = st.text_input('Token de Github', value='***', type="password")
 
