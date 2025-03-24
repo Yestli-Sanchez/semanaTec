@@ -15,7 +15,7 @@ if __name__ == "__main__":
     query='DESCRIBE books'
     spark.sql(query).show(20)
 
-    query='SELECT name, authors,`paginas` FROM books WHERE `paginas` > 10 ORDER BY `paginas`'
+    query='SELECT title, authors,`paginas` FROM books WHERE `paginas` > 10 ORDER BY `paginas`'
     df_books_paginas = spark.sql(query)
     df_books_paginas.show(20)
     results = df_books_paginas.toJSON().collect()
